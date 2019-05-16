@@ -13,7 +13,7 @@ public class Hello2 {
 // c:\workdir>javac -d bin src\by\epam\test\Hello2.java   при этом должна быть папка bin в workdir
 // -d это указание записать байт-код в папку bin
 
-// Запускаем на выполнение с помощбю команды
+// Запускаем на выполнение с помощью команды
 // c:\workdir>java -cp ./bin by.epam.test.Hello2  при компиляции автоматом
 // в папке bin создается путь указанный у нас как пакет
 
