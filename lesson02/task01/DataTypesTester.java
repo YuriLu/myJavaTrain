@@ -1357,4 +1357,113 @@ public class DataTypesTester {
         System.out.printf("char  = boolean: c = (char)%b --> Compile Error\n",
                 bool);
     }
+       public static void testString() {
+
+        String a = "Hello";
+        String b = "World";
+        String c;
+
+
+        System.out.println("\n***** Arithmetical Operators for String type *****");
+        // addition
+        c = a + b;
+        System.out.printf("%s + %s = %s\n", a, b, c);
+
+        a += b;
+        System.out.printf("%s += %s\n --> a = %s", a, b, a);
+
+        System.out.println("\n***** Assignment Operators *****");
+        System.out.println("\n***** Relational Operators *****");
+
+        // equal to
+        System.out.printf("%s == %s --> %b\n", b, b, b == b);
+        // equal to
+        System.out.printf("%s.equals(%s) --> %b\n", b, b, b.equals(b));
+
+        // not equaL to
+        System.out.printf("%s != %s --> %b\n", a, b, a != b);
+
+        System.out.println("\n***** Logical Operations *****");
+        System.out.println("***** Misc Operators *****");
+        System.out.println("\nCondition Operator:");
+
+        System.out.println("Type Cast Operator:");
+
+        byte bt = 125;
+        short sh = -32000;
+        int in = 1254875674;
+        long l = 100000000000000000L;
+        float f = 1.9f;
+        double d = 123456789.625;
+        boolean bool = true;
+        c = Byte.toString(bt);
+        System.out.printf("String = byte: c = %d --> c = %s\n", bt, c);
+        c = Short.toString(sh);
+        System.out.printf("String = short: c = %d --> c = %s\n", sh, c);
+        c = Integer.toString(in);
+        System.out.printf("String = int: c = %d --> c = %s\n", in, c);
+        c = Long.toString(l);
+        System.out.printf("String = long: c = %d --> c = %s\n", l, c);
+        c = Float.toString(f);
+        System.out.printf("String = float: c = %f --> c = %s\n", f, c);
+        c = Double.toString(d);
+        System.out.printf("String = double: c = %f --> c = %s\n", d, c);
+        c = Boolean.toString(bool);
+        System.out.printf("String  = boolean: c = %b --> c = %s\n", bool, c);
+
+    }
+
+    public static void testObject() {
+        System.out.println("\n***Operators for Object type***");
+
+        Student studentFirst = new Student("Petr", 15, 4.5);
+        Student studentSecond = null;
+
+        System.out.println("***Initial state for variables***");
+        System.out.println("studentFirst = " + studentFirst);
+        System.out.println("studentSecond = " + studentSecond);
+
+        System.out.println("\n***Operators for Object type ***\n");
+
+        studentSecond = studentFirst;
+
+        System.out.println("Using toString() method for students: ");
+
+        System.out.println("studentFirst = " + studentFirst);
+        System.out.println("studentSecond = " + studentSecond);
+
+        System.out.println("\nUsing instanceof for Student Object = is studentFirst instanceof Student? ---> "
+                + (studentFirst instanceof Student));
+
+        System.out.println("Is studentFirst == studentSecond ? --->  " + (studentFirst == studentSecond));
+        System.out.println("Is studentFirst.equals(studentSecond)  ? --->  " + (studentFirst.equals(studentSecond)));
+        Student studentThird = new Student("Mitya", 16);
+
+        System.out.println("\nstudentFirst = " + studentFirst);
+        System.out.println("studentSecond = " + studentSecond);
+        System.out.println("studentThird = " + studentThird);
+
+        System.out.println("\nIs studentThird equals studentSecond> ? --->  "
+                + studentSecond.equals(studentThird));
+
+        System.out.println("\nHash code for studentFirst --->  " + studentFirst + " = "
+                + studentFirst.hashCode());
+
+        System.out.println("Hash code for studentSecond --->  " + studentSecond + " = "
+                + studentSecond.hashCode());
+
+        System.out.println("\nHash code for studentFirst == studentSecond --->  " + (studentFirst.hashCode() == studentSecond.hashCode()));
+
+        System.out.println("\nHash code for studentThird --->  " + studentThird + " = "
+                + studentThird.hashCode());
+
+        Student studentForth = new Student("Mitya", 16);
+        System.out.println("\nNew object studentForth = " + studentForth);
+        System.out.println("StudentThird == studentForth --->  " + (studentThird == studentForth));
+        System.out.println("Hash code for studentThird == studentForth --->  " + (studentThird.hashCode() == studentForth.hashCode()));
+
+        studentSecond = null;
+        System.out.println("\nIs studentFirst equals studentSecond when studentSecond==null> ? --->  "
+                + studentFirst.equals(studentSecond));
+    }
 }
