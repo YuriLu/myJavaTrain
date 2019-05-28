@@ -1,4 +1,4 @@
-package lesson03.task01;
+package by.epam.training.yurilukashevich.lesson03.task01;
 
 public class DegreeConverterLogic {
     public static double convertCelsiusToFahrenheit(double celsiusDegree) {

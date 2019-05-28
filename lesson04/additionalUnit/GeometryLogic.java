@@ -1,10 +1,10 @@
-package lesson04.additionalUnit;
+package by.epam.training.yurilukashevich.lesson04.additionalUnit;
 
 public class GeometryLogic {
 
     //12
     public static boolean isPointInFirstQuater(double coordinateX, double coordinateY) {
-        return (coordinateX > 0) && (coordinateY > 0);
+        return coordinateX > 0 && coordinateY > 0;
     }
 
     //13
@@ -14,12 +14,12 @@ public class GeometryLogic {
 
     //14
     public static boolean isTriangleWithEqualSides(double a, double b, double c) {
-        return (a == b) && (b == c);
+        return a == b && b == c;
     }
 
     //15
     public static boolean isTriangleWithTwoEqualSides(double a, double b, double c) {
-        return (a == b) || (b == c) || (a == c);
+        return a == b || b == c || a == c;
     }
 
     //16
@@ -36,6 +36,6 @@ public class GeometryLogic {
 
     //18
     public static boolean isPointInsideRectangle(double x, double y, double x1, double y1, double x2, double y2) {
-        return (x > x1) && (x < x2) && (y > y1) && (y < y2);
+        return x > x1 && x < x2 && y > y1 && y < y2;
     }
 }

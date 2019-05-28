@@ -1,4 +1,4 @@
-package lesson03.task03;
+package by.epam.training.yurilukashevich.lesson03.task03;
 
 public class WeightConverterLogic {
     public static double convertKilogramsToMilligrams(double massa) {

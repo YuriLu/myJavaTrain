@@ -1,28 +1,48 @@
-package lesson04.task04;
+package by.epam.training.yurilukashevich.lesson04.task04;
 
 public class ArithmeticNumberLogic {
 
     public static double getArithmeticalMiddle(int number) {
 
-        int firstDigit = DigitLogic.getDigit(number, 6);
-        int secondDigit = DigitLogic.getDigit(number, 5);
-        int thirdDigit = DigitLogic.getDigit(number, 4);
-        int forthDigit = DigitLogic.getDigit(number, 3);
-        int fifthDigit = DigitLogic.getDigit(number, 2);
-        int sixthDigit = DigitLogic.getDigit(number, 1);
+        int digitSix = number % 10;
+        number /= 10;
 
-        return (firstDigit + secondDigit + thirdDigit + forthDigit + fifthDigit + sixthDigit) / 6;
+        int digitFive = number % 10;
+        number /= 10;
+
+        int digitFour = number % 10;
+        number /= 10;
+
+        int digitThree = number % 10;
+        number /= 10;
+
+        int digitTwo = number % 10;
+        number /= 10;
+
+        int digitOne = number % 10;
+
+        return (digitOne + digitTwo + digitThree + digitFour + digitFive + digitSix) / 6.0;
     }
 
     public static double getGeometricalMiddle(int number) {
 
-        int firstDigit = DigitLogic.getDigit(number, 6);
-        int secondDigit = DigitLogic.getDigit(number, 5);
-        int thirdDigit = DigitLogic.getDigit(number, 4);
-        int forthDigit = DigitLogic.getDigit(number, 3);
-        int fifthDigit = DigitLogic.getDigit(number, 2);
-        int sixthDigit = DigitLogic.getDigit(number, 1);
+        int digitSix = number % 10;
+        number /= 10;
 
-        return Math.pow((firstDigit * secondDigit * thirdDigit * forthDigit * fifthDigit * sixthDigit), 1.0 / 6);
+        int digitFive = number % 10;
+        number /= 10;
+
+        int digitFour = number % 10;
+        number /= 10;
+
+        int digitThree = number % 10;
+        number /= 10;
+
+        int digitTwo = number % 10;
+        number /= 10;
+
+        int digitOne = number % 10;
+
+        return Math.pow(digitOne * digitTwo * digitThree * digitFour * digitFive * digitSix, 1 / 6.0);
     }
 }

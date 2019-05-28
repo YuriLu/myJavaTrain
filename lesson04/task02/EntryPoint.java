@@ -1,10 +1,12 @@
-package lesson04.task02;
+package by.epam.training.yurilukashevich.lesson04.task02;
 
 public class EntryPoint {
     public static void main(String[] args) {
-        double radiusOne = 25.6;
-        double radiusTwo = 18.7;
+        double radiusOne = 23.6;
+        double radiusTwo = 19.1;
 
-        Printer.print("\nRing area for R1 = " + radiusOne + " and R2 = " + radiusTwo + ", is S = " + RingLogic.getRingArea(radiusOne, radiusTwo));
+        double result = RingLogic.getRingArea(radiusOne, radiusTwo);
+        Printer.print("\nRing area for R1 = " + radiusOne
+                + " and R2 = " + radiusTwo + ", is S = " + result + "\n");
     }
 }

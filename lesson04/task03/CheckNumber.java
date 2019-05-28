@@ -1,24 +1,36 @@
-package lesson04.task03;
+package by.epam.training.yurilukashevich.lesson04.task03;
 
 public class CheckNumber {
 
     public static boolean checkIsIncreasing(int number) {
 
-        int firstDigit = DigitLogic.getDigit(number, 4);
-        int secondDigit = DigitLogic.getDigit(number, 3);
-        int thirdDigit = DigitLogic.getDigit(number, 2);
-        int forthDigit = DigitLogic.getDigit(number, 1);
+        int digitFour = number % 10;
+        number /= 10;
 
-        return (firstDigit < secondDigit) && (secondDigit < thirdDigit) && (thirdDigit < forthDigit);
+        int digitThree = number % 10;
+        number /= 10;
+
+        int digitTwo = number % 10;
+        number /= 10;
+
+        int digitOne = number % 10;
+
+        return digitOne < digitTwo && digitTwo < digitThree && digitThree < digitFour;
     }
 
     public static boolean checkIsDecreasing(int number) {
 
-        int firstDigit = DigitLogic.getDigit(number, 4);
-        int secondDigit = DigitLogic.getDigit(number, 3);
-        int thirdDigit = DigitLogic.getDigit(number, 2);
-        int forthDigit = DigitLogic.getDigit(number, 1);
+        int digitFour = number % 10;
+        number /= 10;
 
-        return (firstDigit > secondDigit) && (secondDigit > thirdDigit) && (thirdDigit > forthDigit);
+        int digitThree = number % 10;
+        number /= 10;
+
+        int digitTwo = number % 10;
+        number /= 10;
+
+        int digitOne = number % 10;
+
+        return digitOne > digitTwo && digitTwo > digitThree && digitThree > digitFour;
     }
 }

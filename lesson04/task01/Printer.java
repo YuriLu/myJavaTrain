@@ -1,4 +1,4 @@
-package lesson04.task01;
+package by.epam.training.yurilukashevich.lesson04.task01;
 
 public class Printer {
     public static void print(String msg) {

@@ -1,11 +1,11 @@
-package lesson04.task01;
+package by.epam.training.yurilukashevich.lesson04.task01;
 
 public class NumberLogic {
-    public static boolean checkThatDigitsIsEqual(double a, double b, double c) {
-        return (a == b) && (b == c);
+    public static boolean isDigitsEqual(double a, double b, double c) {
+        return a == b && b == c;
     }
 
-    public static boolean checkThatDigitsIsNotEqual(double a, double b, double c) {
-        return (a != b) || (b != c) || (a != c);
+    public static boolean isDigitsNotEqual(double a, double b, double c) {
+        return a != b || b != c || a != c;
     }
 }

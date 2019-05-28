@@ -1,10 +1,13 @@
-package lesson04.task04;
+package by.epam.training.yurilukashevich.lesson04.task04;
 
 public class EntryPoint {
     public static void main(String[] args) {
-        int number = 823456;
+        int number = 123456;
 
-        Printer.print("\nArithmetical middle for " + number + " is " + ArithmeticNumberLogic.getArithmeticalMiddle(number));
-        System.out.print("\nGeometrical middle for " + number + " is " + ArithmeticNumberLogic.getGeometricalMiddle(number));
+        double result = ArithmeticNumberLogic.getArithmeticalMiddle(number);
+        Printer.print("\nArithmetical middle for " + number + " is " + result);
+
+        result = ArithmeticNumberLogic.getGeometricalMiddle(number);
+        Printer.print("\nGeometrical middle for " + number + " is " + result);
     }
 }

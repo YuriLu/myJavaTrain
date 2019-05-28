@@ -1,6 +1,4 @@
-package lesson03.task02;
-
-import lesson03.serviceModule.Printer;
+package by.epam.training.yurilukashevich.lesson03.task02;
 
 public class EntryPoint {
     public static void main(String[] args) {

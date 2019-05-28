@@ -1,4 +1,4 @@
-package lesson04.additionalUnit;
+package by.epam.training.yurilukashevich.lesson04.additionalUnit;
 
 public class Printer {
     public static void print(String msg){
