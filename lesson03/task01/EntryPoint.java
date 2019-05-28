@@ -23,5 +23,4 @@ public class EntryPoint {
                 + " Fahrenheit degrees = " + celsiusDegree
                 + " Celsius degrees = " + kelvinDegree + " Kelvin degrees\n");
     }
-
 }

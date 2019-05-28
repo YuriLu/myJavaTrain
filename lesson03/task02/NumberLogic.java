@@ -8,7 +8,7 @@ public class NumberLogic {
         Printer.print("\nInitial value for your variables is x = " + x + ", and y = " + y +".\n");
         x += y;
         y = x - y;
-        x = x - y;
+        x -= y;
         Printer.print("We have swapped these values and now they are x = " + x + ", and y = " + y +".\n");
     }
 }

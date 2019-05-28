@@ -1,4 +1,4 @@
-package lesson02.task01;
+package by.epam.training.yurilukashevich.lesson02.task01;
 
 import java.util.Objects;
 

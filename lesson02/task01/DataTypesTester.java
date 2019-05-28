@@ -1,4 +1,4 @@
-package lesson2;
+package by.epam.training.yurilukashevich.lesson02.task01;
 
 public class DataTypesTester {
     public static void testByte() {
