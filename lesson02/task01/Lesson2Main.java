@@ -10,5 +10,7 @@ public class Lesson2Main {
         DataTypesTester.testFloat();
         DataTypesTester.testDouble();
         DataTypesTester.testBoolean();
+        DataTypesTester.testString();
+        DataTypesTester.testObject();
     }
 }

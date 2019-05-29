@@ -1370,10 +1370,10 @@ public class DataTypesTester {
         System.out.printf("%s + %s = %s\n", a, b, c);
 
         a += b;
-        System.out.printf("%s += %s\n --> a = %s", a, b, a);
+        System.out.printf("%s += %s --> a = %s", a, b, a);
 
         System.out.println("\n***** Assignment Operators *****");
-        System.out.println("\n***** Relational Operators *****");
+        System.out.println("***** Relational Operators *****");
 
         // equal to
         System.out.printf("%s == %s --> %b\n", b, b, b == b);
@@ -1385,8 +1385,7 @@ public class DataTypesTester {
 
         System.out.println("\n***** Logical Operations *****");
         System.out.println("***** Misc Operators *****");
-        System.out.println("\nCondition Operator:");
-
+        System.out.println("Condition Operator:");
         System.out.println("Type Cast Operator:");
 
         byte bt = 125;
@@ -1452,15 +1451,22 @@ public class DataTypesTester {
         System.out.println("Hash code for studentSecond --->  " + studentSecond + " = "
                 + studentSecond.hashCode());
 
-        System.out.println("\nHash code for studentFirst == studentSecond --->  " + (studentFirst.hashCode() == studentSecond.hashCode()));
+        System.out.println("\nHash code for studentFirst == studentSecond --->  "
+                + (studentFirst.hashCode() == studentSecond.hashCode()));
 
         System.out.println("\nHash code for studentThird --->  " + studentThird + " = "
                 + studentThird.hashCode());
 
         Student studentForth = new Student("Mitya", 16);
         System.out.println("\nNew object studentForth = " + studentForth);
-        System.out.println("StudentThird == studentForth --->  " + (studentThird == studentForth));
-        System.out.println("Hash code for studentThird == studentForth --->  " + (studentThird.hashCode() == studentForth.hashCode()));
+        System.out.println("StudentThird == studentForth --->  "
+                + (studentThird == studentForth));
+
+        System.out.println("Is StudentThird.equals(studentForth)  ? --->  "
+                + (studentThird.equals(studentForth)));
+
+        System.out.println("Hash code for studentThird == studentForth --->  "
+                + (studentThird.hashCode() == studentForth.hashCode()));
 
         studentSecond = null;
         System.out.println("\nIs studentFirst equals studentSecond when studentSecond==null> ? --->  "
