@@ -1,4 +1,4 @@
-package by.epam.training.yurilukashevich.lesson04.task03;
+package by.epam.javatraining.yurilukashevich.lesson04.task03;
 
 public class EntryPoint {
     public static void main(String[] args) {
