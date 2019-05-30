@@ -1,48 +1,35 @@
-package by.epam.training.yurilukashevich.lesson04.task04;
+package by.epam.javatraining.yurilukashevich.lesson04.task04;
 
 public class ArithmeticNumberLogic {
 
+    private static final double DIGITS_COUNT = 6.0;
+
     public static double getArithmeticalMiddle(int number) {
 
-        int digitSix = number % 10;
-        number /= 10;
+        double sum = 0;
 
-        int digitFive = number % 10;
-        number /= 10;
+        sum += number % 10;             //digitSix
+        sum += (number /= 10) % 10;     //digitFive and sum previous
+        sum += (number /= 10) % 10;     //digitFour and sum previous
+        sum += (number /= 10) % 10;     //digitThree and sum previous
+        sum += (number /= 10) % 10;     //digitTwo and sum previous
+        sum += (number / 10) % 10;      //digitOne and sum previous
 
-        int digitFour = number % 10;
-        number /= 10;
-
-        int digitThree = number % 10;
-        number /= 10;
-
-        int digitTwo = number % 10;
-        number /= 10;
-
-        int digitOne = number % 10;
-
-        return (digitOne + digitTwo + digitThree + digitFour + digitFive + digitSix) / 6.0;
+        return sum / DIGITS_COUNT;
     }
 
     public static double getGeometricalMiddle(int number) {
 
-        int digitSix = number % 10;
-        number /= 10;
+        double multiplicationResult = 1;
+        double rootDegree = 1 / DIGITS_COUNT;
 
-        int digitFive = number % 10;
-        number /= 10;
+        multiplicationResult *= number % 10;             //digitSix
+        multiplicationResult *= (number /= 10) % 10;     //digitFive and multiplicating to previous
+        multiplicationResult *= (number /= 10) % 10;     //digitFour and multiplicating to previous
+        multiplicationResult *= (number /= 10) % 10;     //digitThree and multiplicating to previous
+        multiplicationResult *= (number /= 10) % 10;     //digitTwo and multiplicating to previous
+        multiplicationResult *= (number / 10) % 10;      //digitOne and multiplicating to previous
 
-        int digitFour = number % 10;
-        number /= 10;
-
-        int digitThree = number % 10;
-        number /= 10;
-
-        int digitTwo = number % 10;
-        number /= 10;
-
-        int digitOne = number % 10;
-
-        return Math.pow(digitOne * digitTwo * digitThree * digitFour * digitFive * digitSix, 1 / 6.0);
+        return Math.pow(multiplicationResult, rootDegree);
     }
 }
