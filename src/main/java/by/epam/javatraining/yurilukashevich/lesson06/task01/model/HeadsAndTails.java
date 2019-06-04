@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class HeadsAndTails {
 
+    private static final Random RANDOM = new Random();
+
     public static int countHeads(int iteration) {
         int count = 0;
         iteration = iteration > 0 ? iteration : -iteration;
@@ -17,8 +19,7 @@ public class HeadsAndTails {
     }
 
     private static int flipCoin() {
-        Random rnd = new Random();
-        return rnd.nextInt(2);       //gives 1 or 0
+        return RANDOM.nextInt(2);       //gives 1 or 0
     }
 }
 

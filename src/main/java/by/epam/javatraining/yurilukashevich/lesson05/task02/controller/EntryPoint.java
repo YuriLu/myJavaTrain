@@ -22,17 +22,14 @@ public class EntryPoint {
         result = CharLogic.isSymbolAVowelFifth(symbol);
         Printer.print("\nEntered symbol is vowel by test 5? --> " + result + "\n");
 
-        result = CharLogic.isSymbolAVowelSix(symbol);
+        result = CharLogic.isSymbolAVowelSixth(symbol);
         Printer.print("\nEntered symbol is vowel by test 6? --> " + result + "\n");
 
-        result = CharLogic.isSymbolAVowelSeven(symbol);
+        result = CharLogic.isSymbolAVowelSeventh(symbol);
         Printer.print("\nEntered symbol is vowel by test 7? --> " + result + "\n");
 
         result = CharLogic.isSymbolAVowelEight(symbol);
         Printer.print("\nEntered symbol is vowel by test 8? --> " + result + "\n");
-
-        result = CharLogic.isSymbolAVowelNine(symbol);
-        Printer.print("\nEntered symbol is vowel by test 9? --> " + result + "\n");
 
         System.out.println();
     }

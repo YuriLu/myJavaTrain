@@ -15,47 +15,41 @@ public class CharLogicTest {
     @Test
     public void testIsSymbolAVowelTwo() {
         char symbol = (char) 85;
-        assertTrue(CharLogic.isSymbolAVowel(symbol));
+        assertTrue(CharLogic.isSymbolAVowelSecond(symbol));
     }
     @Test
     public void testIsSymbolAVowelThree() {
         char symbol = 'I';
-        assertTrue(CharLogic.isSymbolAVowel(symbol));
+        assertTrue(CharLogic.isSymbolAVowelThird(symbol));
     }
     @Test
     public void testIsSymbolAVowelFour() {
         char symbol = 'O';
-        assertTrue(CharLogic.isSymbolAVowel(symbol));
+        assertTrue(CharLogic.isSymbolAVowelFourth(symbol));
     }
 
     @Test
     public void testIsSymbolAVowelFive() {
         char symbol = 'U';
-        assertTrue(CharLogic.isSymbolAVowel(symbol));
+        assertTrue(CharLogic.isSymbolAVowelFifth(symbol));
     }
 
     @Test
     public void testIsSymbolAVowelSix() {
         char symbol = 'a';
-        assertTrue(CharLogic.isSymbolAVowel(symbol));
+        assertTrue(CharLogic.isSymbolAVowelSixth(symbol));
     }
 
     @Test
     public void testIsSymbolAVowelSeven() {
         char symbol = '\u0049';
-        assertTrue(CharLogic.isSymbolAVowel(symbol));
+        assertTrue(CharLogic.isSymbolAVowelSeventh(symbol));
     }
 
     @Test
     public void testIsSymbolAVowelEight() {
         char symbol = 'i';
-        assertTrue(CharLogic.isSymbolAVowel(symbol));
-    }
-
-    @Test
-    public void testIsSymbolAVowelNine() {
-        char symbol = 'o';
-        assertTrue(CharLogic.isSymbolAVowel(symbol));
+        assertTrue(CharLogic.isSymbolAVowelEight(symbol));
     }
 
 

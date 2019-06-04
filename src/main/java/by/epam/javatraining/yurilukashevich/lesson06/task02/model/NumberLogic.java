@@ -2,9 +2,8 @@ package by.epam.javatraining.yurilukashevich.lesson06.task02.model;
 
 public class NumberLogic {
 
-    public static boolean checkIsIncreasing(int number) {
+    public static boolean IsIncreasing(int number) {
         number = number > 0 ? number : -number;     //reverse negative number
-
         boolean result = false;
 
         if (number > 9) {                           //we need only numbers with 2 and more digits
@@ -23,9 +22,8 @@ public class NumberLogic {
         return result;
     }
 
-    public static boolean checkIsDecreasing(int number) {
+    public static boolean IsDecreasing(int number) {
         number = number > 0 ? number : -number;     //reverse negative number
-
         boolean result = false;
 
         if (number > 9) {                           //we need only numbers with 2 and more digits

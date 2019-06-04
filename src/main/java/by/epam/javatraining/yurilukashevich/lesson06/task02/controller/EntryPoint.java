@@ -8,10 +8,10 @@ public class EntryPoint {
     public static void main(String[] args) {
         int number = -15679;
 
-        boolean result = NumberLogic.checkIsIncreasing(number);
+        boolean result = NumberLogic.IsIncreasing(number);
         Printer.print("\nEntered number " + number + " has increasing order? --> " + result + "\n");
 
-        result = NumberLogic.checkIsDecreasing(number);
+        result = NumberLogic.IsDecreasing(number);
         Printer.print("\nEntered number " + number + " has decreasing order? --> " + result + "\n");
     }
 }

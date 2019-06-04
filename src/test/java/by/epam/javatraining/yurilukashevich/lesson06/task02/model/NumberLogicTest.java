@@ -9,48 +9,48 @@ public class NumberLogicTest {
     @Test
     public void testIsIncreasingOrder() {
         int number = 1234589;
-        assertTrue(NumberLogic.checkIsIncreasing(number));
+        assertTrue(NumberLogic.IsIncreasing(number));
     }
 
     @Test
     public void testIsIncreasingOrderFalse() {
         int number = 1235489;
-        assertFalse(NumberLogic.checkIsIncreasing(number));
+        assertFalse(NumberLogic.IsIncreasing(number));
     }
 
     @Test
     public void testIsIncreasingOrderOneDigitNumberNegative() {
         int number = -5;
-        assertFalse(NumberLogic.checkIsIncreasing(number));
+        assertFalse(NumberLogic.IsIncreasing(number));
     }
 
     @Test
     public void testIsIncreasingOrderNegativeNumber() {
         int number = -5789;
-        assertTrue(NumberLogic.checkIsIncreasing(number));
+        assertTrue(NumberLogic.IsIncreasing(number));
     }
 
     @Test
     public void testIsDecreasingOrderOneDigitNumber() {
         int number = 9;
-        assertFalse(NumberLogic.checkIsDecreasing(number));
+        assertFalse(NumberLogic.IsDecreasing(number));
     }
 
     @Test
     public void testIsDecreasingOrder() {
         int number = 9631;
-        assertTrue(NumberLogic.checkIsDecreasing(number));
+        assertTrue(NumberLogic.IsDecreasing(number));
     }
 
     @Test
     public void testIsDecreasingOrderFalse() {
         int number = 96831;
-        assertFalse(NumberLogic.checkIsDecreasing(number));
+        assertFalse(NumberLogic.IsDecreasing(number));
     }
 
     @Test
     public void testIsDecreasingOrderNegativeNumber() {
         int number = -532;
-        assertTrue(NumberLogic.checkIsDecreasing(number));
+        assertTrue(NumberLogic.IsDecreasing(number));
     }
 }

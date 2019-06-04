@@ -9,6 +9,6 @@ public class EntryPoint {
         int month = 2;
         int year = 2000;
         Printer.print("You have entered " + day + "." + month + "." + year+"\n");
-        Printer.print(DateLogic.getNextDay(day, month, year));
+        Printer.print(DateLogic.checkNextDay(day, month, year));
     }
 }

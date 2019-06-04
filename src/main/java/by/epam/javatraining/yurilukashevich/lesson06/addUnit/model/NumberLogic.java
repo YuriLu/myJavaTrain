@@ -2,7 +2,7 @@ package by.epam.javatraining.yurilukashevich.lesson06.addUnit.model;
 
 public class NumberLogic {
 
-    public static int getAmountOfEven(int number) {
+    public static int checkAmountOfEven(int number) {
         number = number > 0 ? number : -number;
         int count = 0;
 
@@ -16,7 +16,7 @@ public class NumberLogic {
         return count;
     }
 
-    public static int getAmountOfOdd(int number) {
+    public static int checkAmountOfOdd(int number) {
         number = number > 0 ? number : -number;
         int count = 0;
 
@@ -34,7 +34,7 @@ public class NumberLogic {
         return digit % 2 == 0;
     }
 
-    public static int getSum(int number) {
+    public static int checkSum(int number) {
         int sum = 0;
         number = number > 0 ? number : -number;
 
@@ -46,7 +46,7 @@ public class NumberLogic {
         return sum;
     }
 
-    public static int getMultiplication(int number) {
+    public static int checkMultiplication(int number) {
         int result = 1;
         number = number > 0 ? number : -number;
 
@@ -58,7 +58,7 @@ public class NumberLogic {
         return result;
     }
 
-    public static double getArithmeticalSum(int number) {
+    public static double checkArithmeticalSum(int number) {
         double sum = 0;
         double count = 0;
         number = number > 0 ? number : -number;
@@ -72,7 +72,7 @@ public class NumberLogic {
         return sum / count;
     }
 
-    public static double getGeometricalSum(int number) {
+    public static double checkGeometricalSum(int number) {
         double result = 1;
         double count = 0;
         number = number > 0 ? number : -number;
@@ -151,7 +151,7 @@ public class NumberLogic {
         return result;
     }
 
-    public static int getMaxDigit(int number) {
+    public static int checkMaxDigit(int number) {
         number = number > 0 ? number : -number;
         int max = number % 10;
 

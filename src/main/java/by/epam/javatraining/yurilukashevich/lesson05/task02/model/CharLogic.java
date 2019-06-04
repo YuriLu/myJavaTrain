@@ -2,11 +2,16 @@ package by.epam.javatraining.yurilukashevich.lesson05.task02.model;
 
 public class CharLogic {
 
-    private static final char letterA = 65;
-    private static final char letterE = 69;
-    private static final char letterI = 73;
-    private static final char letterO = 79;
-    private static final char letterU = 85;
+    private static final char LETTER_A = 65;
+    private static final char LETTER_E = 69;
+    private static final char LETTER_I = 73;
+    private static final char LETTER_O = 79;
+    private static final char LETTER_U = 85;
+    private static final char LETTER_A_HEX = '\u0041';
+    private static final char LETTER_E_HEX = '\u0045';
+    private static final char LETTER_I_HEX = '\u0049';
+    private static final char LETTER_O_HEX = '\u004F';
+    private static final char LETTER_U_HEX = '\u0055';
 
 
     public static boolean isSymbolAVowel(char symbol) {
@@ -17,8 +22,8 @@ public class CharLogic {
 
     public static boolean isSymbolAVowelSecond(char symbol) {
         symbol = Character.toUpperCase(symbol);
-        return (int) symbol == letterA || (int) symbol == letterE || (int) symbol == letterI
-                || (int) symbol == letterO || (int) symbol == letterU;
+        return (int) symbol == LETTER_A || (int) symbol == LETTER_E || (int) symbol == LETTER_I
+                || (int) symbol == LETTER_O || (int) symbol == LETTER_U;
     }
 
     public static boolean isSymbolAVowelThird(char symbol) {
@@ -44,20 +49,9 @@ public class CharLogic {
         return vowels.indexOf(symbol) != -1;
     }
 
-    public static boolean isSymbolAVowelSix(char symbol) {
-        symbol = Character.toLowerCase(symbol);
-        Character[] arrayOfVowels = {'a', 'e', 'i', 'o', 'u'};
-        for (Character element : arrayOfVowels) {
-            if (element == symbol) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean isSymbolAVowelSeven(char symbol) {
+    public static boolean isSymbolAVowelSeventh(char symbol) {
         symbol = Character.toUpperCase(symbol);
-        Character[] arrayOfVowelCodes = {'\u0041', '\u0045', '\u0049', '\u004F', '\u0055'};
+        Character[] arrayOfVowelCodes = {LETTER_A_HEX, LETTER_E_HEX, LETTER_I_HEX, LETTER_O_HEX, LETTER_U_HEX};
         for (Character element : arrayOfVowelCodes) {
             if (element.charValue() == symbol) {
                 return true;
@@ -76,7 +70,7 @@ public class CharLogic {
         return false;
     }
 
-    public static boolean isSymbolAVowelNine(char symbol) {
+    public static boolean isSymbolAVowelSixth(char symbol) {
         symbol = Character.toLowerCase(symbol);
         switch (symbol) {
             case 'a':

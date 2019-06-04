@@ -18,7 +18,7 @@ public class DateLogic {
     public static final int DIVIDER_FOR_LEAP_YEAR_100 = 100;
     public static final int DIVIDER_FOR_LEAP_YEAR_4 = 4;
 
-    public static String getNextDay(int day, int month, int year) {
+    public static String checkNextDay(int day, int month, int year) {
         int nextDay = 1;
         int nextMonth = month + 1;
         String result = "Incorrect input";

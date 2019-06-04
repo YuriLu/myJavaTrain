@@ -8,13 +8,13 @@ public class MoodSensor {
     public static final String NEUTRAL_FACE = "\uD83D\uDE10";
     public static final String WHITE_SMILING_FACE = "\u263A";
     public static final String UPSIDE_DOWN_FACE = "\uD83D\uDE43";
-    private static final int  MOODS_COUNT = 5;
-    private static final Random rnd = new Random();
+    private static final int MOOD_COUNT = 5;
+    private static final Random RANDOM = new Random();
 
     public static String guessUserMood() {
         String mood = NEUTRAL_FACE;
 
-        switch (rnd.nextInt(MOODS_COUNT)) {
+        switch (RANDOM.nextInt(MOOD_COUNT)) {
             case 0: {
                 mood = CRYING_FACE;
                 break;

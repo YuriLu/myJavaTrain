@@ -7,55 +7,55 @@ import static org.junit.Assert.*;
 public class NumberLogicTest {
 
     @Test
-    public void getAmountOfEven() {
+    public void testCheckAmountOfEven() {
         int number = 7766;
         int expected = 2;
-        assertEquals(expected, NumberLogic.getAmountOfEven(number));
+        assertEquals(expected, NumberLogic.checkAmountOfEven(number));
     }
 
     @Test
-    public void getAmountOfOdd() {
+    public void testCheckAmountOfOdd() {
         int number = 7766;
         int expected = 2;
-        assertEquals(expected, NumberLogic.getAmountOfOdd(number));
+        assertEquals(expected, NumberLogic.checkAmountOfOdd(number));
     }
 
     @Test
-    public void getSum() {
+    public void testCheckSum() {
         int number = 496;
         int expected = 19;
-        assertEquals(expected, NumberLogic.getSum(number));
+        assertEquals(expected, NumberLogic.checkSum(number));
     }
 
     @Test
-    public void getMultiplication() {
+    public void testCheckMultiplication() {
         int number = 496;
         int expected = 216;
-        assertEquals(expected, NumberLogic.getMultiplication(number));
+        assertEquals(expected, NumberLogic.checkMultiplication(number));
     }
 
     @Test
     public void testArithmeticalSum() {
         int number = 496;
         int expected = 6;
-        assertEquals(expected, NumberLogic.getArithmeticalSum(number),0.5);
+        assertEquals(expected, NumberLogic.checkArithmeticalSum(number),0.5);
     }
 
     @Test
-    public void testGeometricalSum() {
+    public void testCheckGeometricalSum() {
         int number = 496;
         int expected = 6;
-        assertEquals(expected, NumberLogic.getGeometricalSum(number),0.5);
+        assertEquals(expected, NumberLogic.checkGeometricalSum(number),0.5);
     }
 
     @Test
-    public void isPalindrome() {
+    public void testIsPalindrome() {
         int number = 474;
         assertTrue(NumberLogic.isPalindrome(number));
     }
 
     @Test
-    public void isPalindromeNegative() {
+    public void testIsPalindromeNegative() {
         int number = 447;
         assertFalse(NumberLogic.isPalindrome(number));
     }
@@ -73,10 +73,10 @@ public class NumberLogicTest {
     }
 
     @Test
-    public void testMaxDigit() {
+    public void testCheckMaxDigit() {
         int number = 496;
         int expected = 9;
-        assertEquals(expected, NumberLogic.getMaxDigit(number));
+        assertEquals(expected, NumberLogic.checkMaxDigit(number));
     }
 
     @Test
