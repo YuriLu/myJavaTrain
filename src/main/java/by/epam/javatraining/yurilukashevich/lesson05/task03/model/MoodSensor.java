@@ -3,27 +3,24 @@ package by.epam.javatraining.yurilukashevich.lesson05.task03.model;
 import java.util.Random;
 
 public class MoodSensor {
+    public static final String CRYING_FACE = "\uD83D\uDE22";
+    public static final String TIRED_FACE = "\uD83D\uDE2B";
+    public static final String NEUTRAL_FACE = "\uD83D\uDE10";
+    public static final String WHITE_SMILING_FACE = "\u263A";
+    public static final String UPSIDE_DOWN_FACE = "\uD83D\uDE43";
+    private static final int  MOODS_COUNT = 5;
+    private static final Random rnd = new Random();
 
-    public static String getUserMood(int moodNumber) {
+    public static String guessUserMood() {
+        String mood = NEUTRAL_FACE;
 
-        String mood = "";
-        final String CRYING_FACE = "\uD83D\uDE22";
-        final String TIRED_FACE = "\uD83D\uDE2B";
-        final String NEUTRAL_FACE = "\uD83D\uDE10";
-        final String WHITE_SMILING_FACE = "\u263A";
-        final String UPSIDE_DOWN_FACE = "\uD83D\uDE43";
-
-        switch (moodNumber) {
+        switch (rnd.nextInt(MOODS_COUNT)) {
             case 0: {
                 mood = CRYING_FACE;
                 break;
             }
             case 1: {
                 mood = TIRED_FACE;
-                break;
-            }
-            case 2: {
-                mood = NEUTRAL_FACE;
                 break;
             }
             case 3: {
@@ -36,10 +33,5 @@ public class MoodSensor {
             }
         }
         return mood;
-    }
-
-    public static int getUserMoodNumber() {
-        Random rnd = new Random();
-        return rnd.nextInt(5);      //bound for random
     }
 }

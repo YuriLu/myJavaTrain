@@ -10,16 +10,16 @@ public class EntryPoint {
         boolean result = CharLogic.isSymbolAVowel(symbol);
         Printer.print("\nEntered symbol is vowel by test 1? --> " + result + "\n");
 
-        result = CharLogic.isSymbolAVowelTwo(symbol);
+        result = CharLogic.isSymbolAVowelSecond(symbol);
         Printer.print("\nEntered symbol is vowel by test 2? --> " + result + "\n");
 
-        result = CharLogic.isSymbolAVowelThree(symbol);
+        result = CharLogic.isSymbolAVowelThird(symbol);
         Printer.print("\nEntered symbol is vowel by test 3? --> " + result + "\n");
 
-        result = CharLogic.isSymbolAVowelFour(symbol);
+        result = CharLogic.isSymbolAVowelFourth(symbol);
         Printer.print("\nEntered symbol is vowel by test 4? --> " + result + "\n");
 
-        result = CharLogic.isSymbolAVowelFive(symbol);
+        result = CharLogic.isSymbolAVowelFifth(symbol);
         Printer.print("\nEntered symbol is vowel by test 5? --> " + result + "\n");
 
         result = CharLogic.isSymbolAVowelSix(symbol);
@@ -33,5 +33,7 @@ public class EntryPoint {
 
         result = CharLogic.isSymbolAVowelNine(symbol);
         Printer.print("\nEntered symbol is vowel by test 9? --> " + result + "\n");
+
+        System.out.println();
     }
 }

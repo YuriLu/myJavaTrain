@@ -2,20 +2,29 @@ package by.epam.javatraining.yurilukashevich.lesson05.task02.model;
 
 public class CharLogic {
 
+    private static final char letterA = 65;
+    private static final char letterE = 69;
+    private static final char letterI = 73;
+    private static final char letterO = 79;
+    private static final char letterU = 85;
+
+
     public static boolean isSymbolAVowel(char symbol) {
-        return symbol == 'a' || symbol == 'e' || symbol == 'i' || symbol == 'o' || symbol == 'u'
-                || symbol == 'A' || symbol == 'E' || symbol == 'I' || symbol == 'O' || symbol == 'U';
+        symbol = Character.toLowerCase(symbol);
+        return symbol == 'a' || symbol == 'e' || symbol == 'i'
+                || symbol == 'o' || symbol == 'u';
     }
 
-    public static boolean isSymbolAVowelTwo(char symbol) {
-        return (int) symbol == 65 || (int) symbol == 97 || (int) symbol == 69 || (int) symbol == 101
-                || (int) symbol == 73 || (int) symbol == 105 || (int) symbol == 79
-                || (int) symbol == 111 || (int) symbol == 85 || (int) symbol == 117;
+    public static boolean isSymbolAVowelSecond(char symbol) {
+        symbol = Character.toUpperCase(symbol);
+        return (int) symbol == letterA || (int) symbol == letterE || (int) symbol == letterI
+                || (int) symbol == letterO || (int) symbol == letterU;
     }
 
-    public static boolean isSymbolAVowelThree(char symbol) {
-        Character[] arrayOfVowelCodes = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
-        for (Character element : arrayOfVowelCodes) {
+    public static boolean isSymbolAVowelThird(char symbol) {
+        symbol = Character.toLowerCase(symbol);
+        Character[] arrayOfVowels = {'a', 'e', 'i', 'o', 'u'};
+        for (Character element : arrayOfVowels) {
             if (element.charValue() == symbol) {
                 return true;
             }
@@ -23,19 +32,21 @@ public class CharLogic {
         return false;
     }
 
-    public static boolean isSymbolAVowelFour(char symbol) {
-        String vowels = "aeiouAEIOU";
+    public static boolean isSymbolAVowelFourth(char symbol) {
+        symbol = Character.toLowerCase(symbol);
+        String vowels = "aeiou";
         return vowels.contains(Character.toString(symbol));
     }
 
-    public static boolean isSymbolAVowelFive(char symbol) {
-        String vowels = "aeiouAEIOU";
+    public static boolean isSymbolAVowelFifth(char symbol) {
+        symbol = Character.toLowerCase(symbol);
+        String vowels = "aeiou";
         return vowels.indexOf(symbol) != -1;
     }
 
     public static boolean isSymbolAVowelSix(char symbol) {
-
-        Character[] arrayOfVowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+        symbol = Character.toLowerCase(symbol);
+        Character[] arrayOfVowels = {'a', 'e', 'i', 'o', 'u'};
         for (Character element : arrayOfVowels) {
             if (element == symbol) {
                 return true;
@@ -45,8 +56,8 @@ public class CharLogic {
     }
 
     public static boolean isSymbolAVowelSeven(char symbol) {
-        Character[] arrayOfVowelCodes = {'\u0041', '\u0045', '\u0049', '\u004F', '\u0055', '\u0061', '\u0065', '\u0069',
-                '\u006F', '\u0075'};
+        symbol = Character.toUpperCase(symbol);
+        Character[] arrayOfVowelCodes = {'\u0041', '\u0045', '\u0049', '\u004F', '\u0055'};
         for (Character element : arrayOfVowelCodes) {
             if (element.charValue() == symbol) {
                 return true;
@@ -56,7 +67,7 @@ public class CharLogic {
     }
 
     public static boolean isSymbolAVowelEight(char symbol) {
-        String[] arrayOfStringSymbols = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"};
+        String[] arrayOfStringSymbols = {"a", "e", "i", "o", "u"};
         for (String element : arrayOfStringSymbols) {
             if (element.compareToIgnoreCase(Character.toString(symbol)) == 0) {
                 return true;
@@ -66,23 +77,17 @@ public class CharLogic {
     }
 
     public static boolean isSymbolAVowelNine(char symbol) {
+        symbol = Character.toLowerCase(symbol);
         switch (symbol) {
             case 'a':
             case 'e':
-            case 'U':
-            case 'O':
-            case 'I':
-            case 'E':
-            case 'A':
             case 'u':
             case 'o':
             case 'i': {
                 return true;
             }
-            default: {
-                return false;
-            }
         }
+        return false;
     }
 
 }
