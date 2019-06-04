@@ -2,42 +2,15 @@ package by.epam.javatraining.yurilukashevich.lesson05.task03.model;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class MoodSensorTest {
 
     @Test
-    public void testUserMoodForZero() {
-        int cryingFaceMoodStyle = 0;
-        String expected = "\uD83D\uDE22";
-        assertEquals(expected, MoodSensor.getUserMood(cryingFaceMoodStyle));
-    }
+    public void testUserMood() {
+        String moods = MoodSensor.CRYING_FACE + MoodSensor.TIRED_FACE
+                + MoodSensor.NEUTRAL_FACE + MoodSensor.WHITE_SMILING_FACE + MoodSensor.UPSIDE_DOWN_FACE;
 
-    @Test
-    public void testUserMoodForOne() {
-        int TiredFaceMoodStyle = 1;
-        String expected = "\uD83D\uDE2B";
-        assertEquals(expected, MoodSensor.getUserMood(TiredFaceMoodStyle));
-    }
-
-    @Test
-    public void testUserMoodForTwo() {
-        int NeutralMoodStyle = 2;
-        String expected = "\uD83D\uDE10";
-        assertEquals(expected, MoodSensor.getUserMood(NeutralMoodStyle));
-    }
-
-    @Test
-    public void testUserMoodForThree() {
-        int SmilingMoodStyle = 3;
-        String expected = "\u263A";
-        assertEquals(expected, MoodSensor.getUserMood(SmilingMoodStyle));
-    }
-
-    @Test
-    public void testUserMoodForFour() {
-        int UpsideDownMoodStyle = 4;
-        String expected = "\uD83D\uDE43";
-        assertEquals(expected, MoodSensor.getUserMood(UpsideDownMoodStyle));
+        assertTrue(moods.contains(MoodSensor.guessUserMood()));
     }
 }

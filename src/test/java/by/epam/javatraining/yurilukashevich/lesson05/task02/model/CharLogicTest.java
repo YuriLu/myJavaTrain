@@ -14,7 +14,7 @@ public class CharLogicTest {
 
     @Test
     public void testIsSymbolAVowelTwo() {
-        char symbol = (char) 97;
+        char symbol = (char) 85;
         assertTrue(CharLogic.isSymbolAVowel(symbol));
     }
     @Test

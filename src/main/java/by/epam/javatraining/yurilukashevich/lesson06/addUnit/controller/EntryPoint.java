@@ -26,7 +26,7 @@ public class EntryPoint {
         Printer.print("\nEntered number " + number + " has all not equal digits? --> " + resultBool + "\n");
 
         resultBool = NumberLogic.isPalindrome(number);
-        Printer.print("\nEntered number " + number + " is palindrom? --> " + resultBool + ".\n");
+        Printer.print("\nEntered number " + number + " is palindrome? --> " + resultBool + ".\n");
 
         result = NumberLogic.getMaxDigit(number);
         Printer.print("\nEntered number " + number + " has max digit = " + result + ".\n");
