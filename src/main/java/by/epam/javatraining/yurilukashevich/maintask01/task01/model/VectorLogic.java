@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
  *
  * @author Yuri Lukashevich
  * @version 1.0
- * @date June 9, 2019
+ * June 9, 2019
  */
 
 public class VectorLogic {
@@ -193,27 +193,14 @@ public class VectorLogic {
     }
 
     public static void bubbleSortUp(double[] arr) {
-        int length = arr.length;
-        if (length == 0) {
-            LOGGER.error(ERR_MSG_ZERO);
-            return;
-        }
-
-        for (int i = 0; i < length - 1; i++) {
-            boolean isSorted = false;
-            for (int j = 0; j < length - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    swap(arr, j, j + 1);
-                    isSorted = true;
-                }
-            }
-            if (!isSorted) {
-                break;
-            }
-        }
+        bubbleSort(arr, true);
     }
 
     public static void bubbleSortDown(double[] arr) {
+        bubbleSort(arr, false);
+    }
+
+    private static void bubbleSort(double[] arr, boolean direction) {
         int length = arr.length;
         if (length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
@@ -223,7 +210,7 @@ public class VectorLogic {
         for (int i = 0; i < length - 1; i++) {
             boolean isSorted = false;
             for (int j = 0; j < length - i - 1; j++) {
-                if (arr[j] < arr[j + 1]) {
+                if (direction ? arr[j] > arr[j + 1] : arr[j] < arr[j + 1]) {
                     swap(arr, j, j + 1);
                     isSorted = true;
                 }
@@ -235,6 +222,14 @@ public class VectorLogic {
     }
 
     public static void insertionSort(double[] arr) {
+        insertionSort(arr, true);
+    }
+
+    public static void insertionSortDown(double[] arr) {
+        insertionSort(arr, false);
+    }
+
+    private static void insertionSort(double[] arr, boolean direction) {
         int length = arr.length;
         if (length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
@@ -244,7 +239,7 @@ public class VectorLogic {
         for (int i = 1; i < length; i++) {
             double element = arr[i];
             int j = i;
-            while (j > 0 && arr[j - 1] > element) {
+            while (j > 0 && (direction ? arr[j - 1] > element : arr[j - 1] < element)) {
                 arr[j] = arr[j - 1];
                 j--;
             }
@@ -253,6 +248,14 @@ public class VectorLogic {
     }
 
     public static void selectionSort(double[] arr) {
+        selectionSort(arr, true);
+    }
+
+    public static void selectionSortDown(double[] arr) {
+        selectionSort(arr, false);
+    }
+
+    private static void selectionSort(double[] arr, boolean direction) {
         int length = arr.length;
         if (length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
@@ -262,7 +265,7 @@ public class VectorLogic {
         for (int i = 0; i < length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < length; j++) {
-                if (arr[j] < arr[minIndex]) {
+                if (direction ? arr[j] < arr[minIndex] : arr[j] > arr[minIndex]) {
                     minIndex = j;
                 }
             }
@@ -275,10 +278,16 @@ public class VectorLogic {
     public static void mergeSort(double[] arr) {
         int indexFirst = 0;
         int indexLast = arr.length - 1;
-        merge(arr,indexFirst, indexLast);
+        merge(arr, indexFirst, indexLast, true);
     }
 
-    private static void merge(double[] arr, int indexFirst, int indexLast) {
+    public static void mergeSortDown(double[] arr) {
+        int indexFirst = 0;
+        int indexLast = arr.length - 1;
+        merge(arr, indexFirst, indexLast, false);
+    }
+
+    private static void merge(double[] arr, int indexFirst, int indexLast, boolean direction) {
         if (arr.length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return;
@@ -288,8 +297,8 @@ public class VectorLogic {
             int middleIndex = (indexFirst + indexLast) / 2;
 
             // Sort first and second halves
-            merge(arr, indexFirst, middleIndex);
-            merge(arr, middleIndex + 1, indexLast);
+            merge(arr, indexFirst, middleIndex, direction);
+            merge(arr, middleIndex + 1, indexLast, direction);
 
             // Find sizes of two sub arrays to be merged
             int sizeLeft = middleIndex - indexFirst + 1;
@@ -313,7 +322,7 @@ public class VectorLogic {
             // Initial index of merged sub array array
             int k = indexFirst;
             while (i < sizeLeft && j < sizeRight) {
-                if (arrayLeft[i] <= arrayRight[j]) {
+                if (direction ? arrayLeft[i] <= arrayRight[j] : arrayLeft[i] >= arrayRight[j]) {
                     arr[k] = arrayLeft[i];
                     i++;
                 } else {
@@ -342,10 +351,16 @@ public class VectorLogic {
     public static void quickSort(double[] arr) {
         int low = 0;
         int high = arr.length - 1;
-        quick(arr,low, high);
+        quick(arr, low, high, true);
     }
 
-    private static void quick(double[] arr, int low, int high) {
+    public static void quickSortDown(double[] arr) {
+        int low = 0;
+        int high = arr.length - 1;
+        quick(arr, low, high, false);
+    }
+
+    private static void quick(double[] arr, int low, int high, boolean direction) {
         if (arr == null || arr.length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return;
@@ -360,14 +375,14 @@ public class VectorLogic {
         int i = low;
         int j = high;
         while (i <= j) {
-            while (arr[i] < pivot) {
+            while (direction ? arr[i] < pivot : arr[i] > pivot) {
                 i++;
             }
-            while (arr[j] > pivot) {
+            while (direction ? arr[j] > pivot : arr[j] < pivot) {
                 j--;
             }
-            if (i <= j) {     //swap elements
-                swap(arr,i,j);
+            if (i <= j) {
+                swap(arr, i, j);
                 i++;
                 j--;
             }
@@ -375,10 +390,10 @@ public class VectorLogic {
 
         // recursively sort two sub parts
         if (low < j)
-            quick(arr, low, j);
+            quick(arr, low, j, direction);
 
         if (high > i)
-            quick(arr, i, high);
+            quick(arr, i, high, direction);
     }
 
     private static void swap(double[] arr, int indexOne, int indexTwo) {
