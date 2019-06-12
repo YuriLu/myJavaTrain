@@ -59,8 +59,8 @@ public class NumberLogic {
     }
 
     public static double checkArithmeticalSum(int number) {
-        double sum = 0;
-        double count = 0;
+        double sum = 0.0;
+        double count = 0.0;
         number = number > 0 ? number : -number;
 
         while (number > 0) {
@@ -73,8 +73,8 @@ public class NumberLogic {
     }
 
     public static double checkGeometricalSum(int number) {
-        double result = 1;
-        double count = 0;
+        double result = 1.0;
+        double count = 0.0;
         number = number > 0 ? number : -number;
 
         while (number > 0) {
@@ -118,8 +118,9 @@ public class NumberLogic {
     public static boolean isDigitsEqual(int number) {
         boolean result = false;
         number = number > 0 ? number : -number;
+        int maxOneDigitNumber = 9;
 
-        if (number > 9) {
+        if (number > maxOneDigitNumber) {
             while (number / 10 != 0) {
                 int previousDigit = number % 10;
                 int currentDigit = (number /= 10) % 10;
@@ -154,13 +155,15 @@ public class NumberLogic {
     public static int checkMaxDigit(int number) {
         number = number > 0 ? number : -number;
         int max = number % 10;
+        int maxDigit = 9;
+
 
         while (number > 0) {
             int digit = number % 10;
             if (digit > max) {
                 max = digit;
             }
-            if (max == 9) {
+            if (max == maxDigit) {
                 break;
             }
             number /= 10;
