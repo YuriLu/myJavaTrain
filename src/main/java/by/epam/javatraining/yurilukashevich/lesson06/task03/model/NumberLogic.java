@@ -2,7 +2,7 @@ package by.epam.javatraining.yurilukashevich.lesson06.task03.model;
 
 public class NumberLogic {
 
-    public static int getFactorial(int number) {
+    public static int countFactorial(int number) {
         int factorial = 0;
 
         if (number >= 0) {

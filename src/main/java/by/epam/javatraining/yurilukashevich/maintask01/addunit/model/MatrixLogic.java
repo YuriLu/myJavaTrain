@@ -6,8 +6,8 @@ import org.apache.log4j.Logger;
  * Class contains methods for processing matrix N*M.
  *
  * @author Yuri Lukashevich
- * @version 1.0
- * June 10, 2019
+ * @version 1.1
+ * @createdate June 10, 2019
  */
 
 public class MatrixLogic {

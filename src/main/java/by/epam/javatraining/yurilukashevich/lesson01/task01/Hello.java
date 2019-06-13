@@ -7,6 +7,6 @@ public class Hello {
     }
 
     static class MisterX {
-        static String msg = "I love apples";
+        static final String msg = "I love apples";
     }
 }

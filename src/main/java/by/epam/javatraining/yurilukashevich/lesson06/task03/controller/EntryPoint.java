@@ -8,7 +8,7 @@ public class EntryPoint {
     public static void main(String[] args) {
         int number = 1;
 
-        int result = NumberLogic.getFactorial(number);
+        int result = NumberLogic.countFactorial(number);
         Printer.print("\nEntered number " + number + " has factorial = " + result + "\n");
     }
 }

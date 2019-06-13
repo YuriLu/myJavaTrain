@@ -81,13 +81,13 @@ public class EntryPoint {
                 + result);
 
         int number = 4554;
-        result = NumberLogic.isPalindrom(number);
-        Printer.print("\nIs entered number " + number + " palindrom? " + result);
+        result = NumberLogic.isPalindrome(number);
+        Printer.print("\nIs entered number " + number + " palindrome? " + result);
 
         double x = 5;
         double y = 15;
-        result = GeometryLogic.isPointInFirstQuater(x, y);
-        Printer.print("\nEntered numbers: " + x + ", " + y + " belongs to Ist quater? -- " + result);
+        result = GeometryLogic.isPointInFirstQuoter(x, y);
+        Printer.print("\nEntered numbers: " + x + ", " + y + " belongs to Ist quoter? -- " + result);
 
         result = GeometryLogic.isTriangle(a, b, c);
         Printer.print("\nEntered numbers: " + a + ", " + b + ", " + c
@@ -123,8 +123,8 @@ public class EntryPoint {
         Printer.print("\nYou have entered size " + size + " in bytes.\nconverting....\n");
         DataLogic.dataConverter(size);
 
-        int distane = 4859205;
-        Printer.print("\nYou have entered distance " + distane + " in santimeters.\nconverting....\n");
-        DataLogic.distanceConverter(distane);
+        int distance = 4859205;
+        Printer.print("\nYou have entered distance " + distance + " in centimeters.\nconverting....\n");
+        DataLogic.distanceConverter(distance);
     }
 }

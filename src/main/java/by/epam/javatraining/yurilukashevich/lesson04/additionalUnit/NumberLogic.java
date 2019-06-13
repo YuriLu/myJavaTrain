@@ -83,8 +83,8 @@ public class NumberLogic {
 
     //9
     public static boolean isSameParity(double a, double b, double c) {
-        return ((a % 2 == 0) && (b % 2 == 0) && (c % 2 == 0))
-                || ((a % 2 != 0) && (b % 2 != 0) && (c % 2 != 0));
+        return (a % 2 == 0 && b % 2 == 0 && c % 2 == 0)
+                || (a % 2 != 0 && b % 2 != 0 && c % 2 != 0);
     }
 
     //10
@@ -101,7 +101,11 @@ public class NumberLogic {
     }
 
     //11
-    public static boolean isPalindrom(int number) {
+    public static boolean isPalindrome(int number) {
+        //this method only for 4-digit numbers
+        if (number / 1000 > 1) {
+            return false;
+        }
         return (number % 10 == number / 1000) && (number / 10 % 10 == number / 10 % 10);
     }
 }

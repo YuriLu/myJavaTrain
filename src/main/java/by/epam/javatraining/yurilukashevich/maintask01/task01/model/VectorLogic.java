@@ -6,8 +6,8 @@ import org.apache.log4j.Logger;
  * Class contains methods for processing arrays.
  *
  * @author Yuri Lukashevich
- * @version 1.0
- * June 9, 2019
+ * @version 1.1
+ * @createdate June 9, 2019
  */
 
 public class VectorLogic {
@@ -309,11 +309,12 @@ public class VectorLogic {
             double[] arrayRight = new double[sizeRight];
 
             /*Copy data to temp arrays*/
-            for (int i = 0; i < sizeLeft; ++i)
+            for (int i = 0; i < sizeLeft; ++i) {
                 arrayLeft[i] = arr[indexFirst + i];
-            for (int j = 0; j < sizeRight; ++j)
+            }
+            for (int j = 0; j < sizeRight; ++j) {
                 arrayRight[j] = arr[middleIndex + 1 + j];
-
+            }
             /* Merge the temp arrays */
             // Initial indexes of first and second sub arrays
             int i = 0;
@@ -389,11 +390,13 @@ public class VectorLogic {
         }
 
         // recursively sort two sub parts
-        if (low < j)
+        if (low < j) {
             quick(arr, low, j, direction);
+        }
 
-        if (high > i)
+        if (high > i) {
             quick(arr, i, high, direction);
+        }
     }
 
     private static void swap(double[] arr, int indexOne, int indexTwo) {

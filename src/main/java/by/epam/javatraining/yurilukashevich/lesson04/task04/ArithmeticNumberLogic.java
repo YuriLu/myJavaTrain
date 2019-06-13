@@ -24,11 +24,11 @@ public class ArithmeticNumberLogic {
         double rootDegree = 1 / DIGITS_COUNT;
 
         multiplicationResult *= number % 10;             //digitSix
-        multiplicationResult *= (number /= 10) % 10;     //digitFive and multiplicating by previous
-        multiplicationResult *= (number /= 10) % 10;     //digitFour and multiplicating by previous
-        multiplicationResult *= (number /= 10) % 10;     //digitThree and multiplicating by previous
-        multiplicationResult *= (number /= 10) % 10;     //digitTwo and multiplicating by previous
-        multiplicationResult *= (number / 10) % 10;      //digitOne and multiplicating by previous
+        multiplicationResult *= (number /= 10) % 10;     //digitFive and multiplication by previous
+        multiplicationResult *= (number /= 10) % 10;     //digitFour and multiplication by previous
+        multiplicationResult *= (number /= 10) % 10;     //digitThree and multiplication by previous
+        multiplicationResult *= (number /= 10) % 10;     //digitTwo and multiplication by previous
+        multiplicationResult *= (number / 10) % 10;      //digitOne and multiplication by previous
 
         return Math.pow(multiplicationResult, rootDegree);
     }

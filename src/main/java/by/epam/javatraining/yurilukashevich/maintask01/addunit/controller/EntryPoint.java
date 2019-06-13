@@ -11,8 +11,8 @@ import java.util.Random;
  * Entry point for processing matrix N*M.
  *
  * @author Yuri Lukashevich
- * @version 1.0
- * June 10, 2019
+ * @version 1.1
+ * @createdate June 10, 2019
  */
 
 public class EntryPoint {
@@ -33,22 +33,21 @@ public class EntryPoint {
             }
         }
 
-
-        LOGGER.info("\nCreate matrix of size = [" + arraySizeN + "," + arraySizeM + "]");
+        Printer.print("\nCreate matrix of size = [" + arraySizeN + "," + arraySizeM + "]");
         Printer.printArray(array);
 
-        LOGGER.info("\nMin element = " + MatrixLogic.searchMin(array));
-        LOGGER.info("\nMax element = " + MatrixLogic.searchMax(array));
-        LOGGER.info("\nIs symmetric(square)? --> " + MatrixLogic.isSymmetric(array));
-        LOGGER.info("\nIs symmetric by diagonal? --> " + MatrixLogic.isSymmetricByDiagonal(array) + "\n");
+        Printer.print("\nMin element = " + MatrixLogic.searchMin(array));
+        Printer.print("\nMax element = " + MatrixLogic.searchMax(array));
+        Printer.print("\nIs symmetric(square)? --> " + MatrixLogic.isSymmetric(array));
+        Printer.print("\nIs symmetric by diagonal? --> " + MatrixLogic.isSymmetricByDiagonal(array) + "\n");
 
         array = new int[][]{{2, 34, 42}, {17, 9, 28}, {35, 37, 3}};
         Printer.printArray(array);
 
-        LOGGER.info("\nFirst local Min is " + MatrixLogic.localMinSearch(array) + "\n");
-        LOGGER.info("\nFirst local Max is " + MatrixLogic.localMaxSearch(array) + "\n");
+        Printer.print("\nFirst local Min is " + MatrixLogic.localMinSearch(array) + "\n");
+        Printer.print("\nFirst local Max is " + MatrixLogic.localMaxSearch(array) + "\n");
 
-        LOGGER.info("\nTranspose matrix:");
+        Printer.print("\nTranspose matrix:");
         MatrixLogic.transpose(array);
         Printer.printArray(array);
 

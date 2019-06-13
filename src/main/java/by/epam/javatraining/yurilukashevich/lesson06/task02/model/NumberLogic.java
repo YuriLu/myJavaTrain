@@ -5,8 +5,9 @@ public class NumberLogic {
     public static boolean IsIncreasing(int number) {
         number = number > 0 ? number : -number;     //reverse negative number
         boolean result = false;
+        final int MAX_DIGIT_ONE_DIGIT_NUMBER = 9;
 
-        if (number > 9) {                           //we need only numbers with 2 and more digits
+        if (number > MAX_DIGIT_ONE_DIGIT_NUMBER) {                           //we need only numbers with 2 and more digits
             while (number / 10 != 0) {
                 int previousDigit = number % 10;
                 int currentDigit = (number /= 10) % 10;
@@ -25,8 +26,9 @@ public class NumberLogic {
     public static boolean IsDecreasing(int number) {
         number = number > 0 ? number : -number;     //reverse negative number
         boolean result = false;
+        final int MAX_DIGIT_ONE_DIGIT_NUMBER = 9;
 
-        if (number > 9) {                           //we need only numbers with 2 and more digits
+        if (number > MAX_DIGIT_ONE_DIGIT_NUMBER) {  //we need only numbers with 2 and more digits
             while (number / 10 != 0) {
                 int previousDigit = number % 10;
                 int currentDigit = (number /= 10) % 10;

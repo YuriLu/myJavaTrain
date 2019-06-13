@@ -9,6 +9,6 @@ public class EntryPoint {
         Printer.print("\nDinosaur weights " + dinosaurWeightInKilogram + " kilogram = "
                 + WeightConverterLogic.convertKilogramsToMilligrams(dinosaurWeightInKilogram) + " milligrams = "
                 + WeightConverterLogic.convertKilogramsToGrams(dinosaurWeightInKilogram) + " grams = "
-                + WeightConverterLogic.convertKilogramsToTonns(dinosaurWeightInKilogram) + " tons\n");
+                + WeightConverterLogic.convertKilogramsToTons(dinosaurWeightInKilogram) + " tons\n");
     }
 }

@@ -19,10 +19,10 @@ public class DataTypesTester {
         // division
         c = (byte) (a / b);
         System.out.printf("%d / %d = %d\n", a, b, c);
-        // moduLus
+        // modulus
         c = (byte) (a % b);
         System.out.printf("%d %% %d = %d\n", a, b, c);
-//        unari minus
+//        unary minus
         c = (byte) -a;
         System.out.printf("-%d = %d\n", a, c);
 //        unary plus
@@ -109,8 +109,8 @@ public class DataTypesTester {
         System.out.printf("%d /= %d --> c = %d\n", c, a, c /= a);
         System.out.printf("%d %%= %d --> c = %d\n", c, a, c %= a);
 
-        // c %= 0; --> ArithmeticaL Exception
-        // c /= 0; --> ArithmeticaL Exception
+        // c %= 0; --> Arithmetical Exception
+        // c /= 0; --> Arithmetical Exception
         c = 7;
         System.out.printf("%d |= %d --> c = %d\n", c, a, c |= a);
         c = 7;
@@ -129,7 +129,7 @@ public class DataTypesTester {
 
         // greater than
         System.out.printf("%d > %d --> %b\n", a, b, a > b);
-        // greater than or equaL to
+        // greater than or equal to
         System.out.printf("%d >= %d --> %b\n", a, b, a >= b);
         // Less than
         System.out.printf("%d < %d --> %b\n", a, b, a < b);
@@ -137,7 +137,7 @@ public class DataTypesTester {
         System.out.printf("%d <= %d --> %b\n", a, b, a <= b);
         // equal to
         System.out.printf("%d == %d --> %b\n", a, b, a == b);
-        // not equaL to
+        // not equal to
         System.out.printf("%d != %d --> %b\n", a, b, a != b);
 
         System.out.println("\n***** Logical Operations *****");
@@ -162,7 +162,7 @@ public class DataTypesTester {
         System.out.printf("(%d >= %d) ^ (%d != 0) --> %b\n", a, b, b,
                 (a >= b) ^ (b != 0));
 
-        // LogicaL NOT
+        // Logical NOT
         System.out.printf("!(%d >= %d) --> %b\n", a, b, !(a >= b));
 
         System.out.println("\n***** Misc Operators *****");
@@ -215,10 +215,10 @@ public class DataTypesTester {
         // division
         c = (short) (a / b);
         System.out.printf("%d / %d = %d\n", a, b, c);
-        // moduLus
+        // modulus
         c = (short) (a % b);
         System.out.printf("%d %% %d = %d\n", a, b, c);
-//        unari minus
+//        unary minus
         c = (short) -a;
         System.out.printf("-%d = %d\n", a, c);
 //        unary plus
@@ -305,8 +305,8 @@ public class DataTypesTester {
         System.out.printf("%d /= %d --> c = %d\n", c, a, c /= a);
         System.out.printf("%d %%= %d --> c = %d\n", c, a, c %= a);
 
-        // c %= 0; --> ArithmeticaL Exception
-        // c /= 0; --> ArithmeticaL Exception
+        // c %= 0; --> Arithmetical Exception
+        // c /= 0; --> Arithmetical Exception
 
         System.out.printf("%d |= %d --> c = %d\n", c, a, c |= a);
         System.out.printf("%d &= %d --> c = %d\n", c, a, c &= a);
@@ -323,7 +323,7 @@ public class DataTypesTester {
 
         // greater than
         System.out.printf("%d > %d --> %b\n", a, b, a > b);
-        // greater than or equaL to
+        // greater than or equal to
         System.out.printf("%d >= %d --> %b\n", a, b, a >= b);
         // Less than
         System.out.printf("%d < %d --> %b\n", a, b, a < b);
@@ -331,7 +331,7 @@ public class DataTypesTester {
         System.out.printf("%d <= %d --> %b\n", a, b, a <= b);
         // equal to
         System.out.printf("%d == %d --> %b\n", a, b, a == b);
-        // not equaL to
+        // not equal to
         System.out.printf("%d != %d --> %b\n", a, b, a != b);
 
         System.out.println("\n***** Logical Operations *****");
@@ -356,7 +356,7 @@ public class DataTypesTester {
         System.out.printf("(%d >= %d) ^ (%d != 0) --> %b\n", a, b, b,
                 (a >= b) ^ (b != 0));
 
-        // LogicaL NOT
+        // Logical NOT
         System.out.printf("!(%d >= %d) --> %b\n", a, b, !(a >= b));
 
         System.out.println("\n***** Misc Operators *****");
@@ -409,10 +409,10 @@ public class DataTypesTester {
         // division
         c = a / b;
         System.out.printf("%d / %d = %d\n", a, b, c);
-        // moduLus
+        // modulus
         c = a % b;
         System.out.printf("%d %% %d = %d\n", a, b, c);
-//        unari minus
+//        unary minus
         c = -a;
         System.out.printf("-%d = %d\n", a, c);
 //        unary plus
@@ -517,7 +517,7 @@ public class DataTypesTester {
 
         // greater than
         System.out.printf("%d > %d --> %b\n", a, b, a > b);
-        // greater than or equaL to
+        // greater than or equal to
         System.out.printf("%d >= %d --> %b\n", a, b, a >= b);
         // Less than
         System.out.printf("%d < %d --> %b\n", a, b, a < b);
@@ -525,7 +525,7 @@ public class DataTypesTester {
         System.out.printf("%d <= %d --> %b\n", a, b, a <= b);
         // equal to
         System.out.printf("%d == %d --> %b\n", a, b, a == b);
-        // not equaL to
+        // not equal to
         System.out.printf("%d != %d --> %b\n", a, b, a != b);
 
         System.out.println("\n***** Logical Operations *****");
@@ -603,10 +603,10 @@ public class DataTypesTester {
         // division
         c = a / b;
         System.out.printf("%d / %d = %d\n", a, b, c);
-        // moduLus
+        // modulus
         c = a % b;
         System.out.printf("%d %% %d = %d\n", a, b, c);
-//        unari minus
+//        unary minus
         c = -a;
         System.out.printf("-%d = %d\n", a, c);
 //        unary plus
@@ -712,7 +712,7 @@ public class DataTypesTester {
 
         // greater than
         System.out.printf("%d > %d --> %b\n", a, b, a > b);
-        // greater than or equaL to
+        // greater than or equal to
         System.out.printf("%d >= %d --> %b\n", a, b, a >= b);
         // Less than
         System.out.printf("%d < %d --> %b\n", a, b, a < b);
@@ -720,7 +720,7 @@ public class DataTypesTester {
         System.out.printf("%d <= %d --> %b\n", a, b, a <= b);
         // equal to
         System.out.printf("%d == %d --> %b\n", a, b, a == b);
-        // not equaL to
+        // not equal to
         System.out.printf("%d != %d --> %b\n", a, b, a != b);
 
         System.out.println("\n***** Logical Operations *****");
@@ -745,7 +745,7 @@ public class DataTypesTester {
         System.out.printf("(%d >= %d) ^ (%d != 0) --> %b\n", a, b, b,
                 (a >= b) ^ (b != 0));
 
-        // LogicaL NOT
+        // Logical NOT
         System.out.printf("!(%d >= %d) --> %b\n", a, b, !(a >= b));
 
         System.out.println("\n***** Misc Operators *****");
@@ -801,7 +801,7 @@ public class DataTypesTester {
         // modulus
         c = a % b;
         System.out.printf("%f %% %f = %f\n", a, b, c);
-//        unari minus
+//        unary minus
         c = -a;
         System.out.printf("-%f = %f\n", a, c);
 //        unary plus
@@ -855,7 +855,7 @@ public class DataTypesTester {
 
         // greater than
         System.out.printf("%f > %f --> %b\n", a, b, a > b);
-        // greater than or equaL to
+        // greater than or equal to
         System.out.printf("%f >= %f --> %b\n", a, b, a >= b);
         // Less than
         System.out.printf("%f < %f --> %b\n", a, b, a < b);
@@ -863,7 +863,7 @@ public class DataTypesTester {
         System.out.printf("%f <= %f --> %b\n", a, b, a <= b);
         // equal to
         System.out.printf("%f == %f --> %b\n", a, b, a == b);
-        // not equaL to
+        // not equal to
         System.out.printf("%f != %f --> %b\n", a, b, a != b);
 
         System.out.println("\n***** Logical Operations *****");
@@ -888,7 +888,7 @@ public class DataTypesTester {
         System.out.printf("(%f >= %f) ^ (%f != 0) --> %b\n", a, b, b,
                 (a >= b) ^ (b != 0));
 
-        // LogicaL NOT
+        // Logical NOT
         System.out.printf("!(%f >= %f) --> %b\n", a, b, !(a >= b));
 
         System.out.println("\n***** Misc Operators *****");
@@ -944,7 +944,7 @@ public class DataTypesTester {
         // modulus
         c = a % b;
         System.out.printf("%f %% %f = %f\n", a, b, c);
-        // unari minus
+        // unary minus
         c = -a;
         System.out.printf("-%f = %f\n", a, c);
         // unary plus
@@ -984,8 +984,8 @@ public class DataTypesTester {
         System.out.printf("%f /= %f --> c = %f\n", c, a, c /= a);
         System.out.printf("%f %%= %f --> c = %f\n", c, a, c %= a);
 
-        // c %= 0; --> ArithmeticaL Exception
-        // c /= 0; --> ArithmeticaL Exception
+        // c %= 0; --> Arithmetical Exception
+        // c /= 0; --> Arithmetical Exception
 
 //        System.out.printf("%d |= %d --> c = %d\n", c, a, c |= a);
 //        System.out.printf("%d &= %d --> c = %d\n", c, a, c &= a);
@@ -999,7 +999,7 @@ public class DataTypesTester {
 
         // greater than
         System.out.printf("%f > %f --> %b\n", a, b, a > b);
-        // greater than or equaL to
+        // greater than or equal to
         System.out.printf("%f >= %f --> %b\n", a, b, a >= b);
         // less than
         System.out.printf("%f < %f --> %b\n", a, b, a < b);
@@ -1032,7 +1032,7 @@ public class DataTypesTester {
         System.out.printf("(%f >= %f) ^ (%f != 0) --> %b\n", a, b, b,
                 (a >= b) ^ (b != 0));
 
-        // LogicaL NOT
+        // Logical NOT
         System.out.printf("!(%f >= %f) --> %b\n", a, b, !(a >= b));
 
         System.out.println("\n***** Misc Operators *****");
@@ -1123,9 +1123,9 @@ public class DataTypesTester {
         System.out.printf("%b != %b --> %b\n", a, b, a != b);
 
         // c = a > b; // greater than
-        // c = a >= b; // greater than or equaL to
+        // c = a >= b; // greater than or equal to
         // c = a < b; // Less than
-        // c = a <= b; // Less than or equaL to
+        // c = a <= b; // Less than or equal to
 
         System.out.println("\n***** Logical Operations *****");
 
@@ -1146,12 +1146,12 @@ public class DataTypesTester {
 
         System.out.println("\nType Cast Operator:");
 
-        byte bt = 1;
-        short sh = -32000;
-        char ch = '\u0033';
-        long l = 100000000000000000L;
-        float f = 1.9f;
-        double d = 123456789.625;
+//        byte bt = 1;
+//        short sh = -32000;
+//        char ch = '\u0033';
+//        long l = 100000000000000000L;
+//        float f = 1.9f;
+//        double d = 123456789.625;
         boolean bool = true;
 //        c = (boolean) bt;
 //        c = (boolean) sh;
@@ -1182,10 +1182,10 @@ public class DataTypesTester {
         // division
         c = (char) (a / b);
         System.out.printf("%c / %c = %c\n", a, b, c);
-        // moduLus
+        // modulus
         c = (char) (a % b);
         System.out.printf("%c %% %c = %c\n", a, b, c);
-//        unari minus
+//        unary minus
         c = (char) -a;
         System.out.printf("-%c = %c\n", a, c);
 //        unary plus
@@ -1290,7 +1290,7 @@ public class DataTypesTester {
 
         // greater than
         System.out.printf("%c > %c --> %b\n", a, b, a > b);
-        // greater than or equaL to
+        // greater than or equal to
         System.out.printf("%c >= %c --> %b\n", a, b, a >= b);
         // Less than
         System.out.printf("%c < %c --> %b\n", a, b, a < b);
@@ -1298,7 +1298,7 @@ public class DataTypesTester {
         System.out.printf("%c <= %c --> %b\n", a, b, a <= b);
         // equal to
         System.out.printf("%c == %c --> %b\n", a, b, a == b);
-        // not equaL to
+        // not equal to
         System.out.printf("%c != %c --> %b\n", a, b, a != b);
 
         System.out.println("\n***** Logical Operations *****");
@@ -1323,7 +1323,7 @@ public class DataTypesTester {
         System.out.printf("(%c >= %c) ^ (%c != 0) --> %b\n", a, b, b,
                 (a >= b) ^ (b != 0));
 
-        // LogicaL NOT
+        // Logical NOT
         System.out.printf("!(%c >= %c) --> %b\n", a, b, !(a >= b));
 
         System.out.println("\n***** Misc Operators *****");
@@ -1338,8 +1338,8 @@ public class DataTypesTester {
         short sh = -32000;
         int in = 1254875674;
         long l = 100000000000000000L;
-        float f = 1.9f;
-        double d = 123456789.625;
+//        float f = 1.9f;
+//        double d = 123456789.625;
         boolean bool = true;
         c = (char) bt;
         System.out.printf("char = byte: c = (char)%d --> c = %c\n", bt, c);
@@ -1357,7 +1357,8 @@ public class DataTypesTester {
         System.out.printf("char  = boolean: c = (char)%b --> Compile Error\n",
                 bool);
     }
-       public static void testString() {
+
+    public static void testString() {
 
         String a = "Hello";
         String b = "World";
@@ -1380,7 +1381,7 @@ public class DataTypesTester {
         // equal to
         System.out.printf("%s.equals(%s) --> %b\n", b, b, b.equals(b));
 
-        // not equaL to
+        // not equal to
         System.out.printf("%s != %s --> %b\n", a, b, a != b);
 
         System.out.println("\n***** Logical Operations *****");

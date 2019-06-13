@@ -5,7 +5,7 @@ public class NumberLogic {
     public static int reverseSevenDigitNumber(int number) {
 
         // initial multiplier for seven digit number
-        int multiplier = 1000000;
+        int multiplier = 1_000_000;
 
         int digitSeven = number % 10 * multiplier;
         int digitSix = (number /= 10) % 10 * (multiplier /= 10);

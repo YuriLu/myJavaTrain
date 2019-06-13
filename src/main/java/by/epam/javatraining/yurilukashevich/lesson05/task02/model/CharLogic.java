@@ -12,7 +12,7 @@ public class CharLogic {
     private static final char LETTER_I_HEX = '\u0049';
     private static final char LETTER_O_HEX = '\u004F';
     private static final char LETTER_U_HEX = '\u0055';
-
+    private static final String VOWELS = "aeiou";
 
     public static boolean isSymbolAVowel(char symbol) {
         symbol = Character.toLowerCase(symbol);
@@ -39,14 +39,12 @@ public class CharLogic {
 
     public static boolean isSymbolAVowelFourth(char symbol) {
         symbol = Character.toLowerCase(symbol);
-        String vowels = "aeiou";
-        return vowels.contains(Character.toString(symbol));
+        return VOWELS.contains(Character.toString(symbol));
     }
 
     public static boolean isSymbolAVowelFifth(char symbol) {
         symbol = Character.toLowerCase(symbol);
-        String vowels = "aeiou";
-        return vowels.indexOf(symbol) != -1;
+        return VOWELS.indexOf(symbol) != -1;
     }
 
     public static boolean isSymbolAVowelSeventh(char symbol) {
