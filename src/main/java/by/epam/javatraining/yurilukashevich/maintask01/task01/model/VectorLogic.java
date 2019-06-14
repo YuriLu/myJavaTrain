@@ -16,7 +16,7 @@ public class VectorLogic {
 
     public static double searchMin(double[] arr) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return -1.0;
         }
@@ -31,7 +31,7 @@ public class VectorLogic {
 
     public static double searchMax(double[] arr) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return -1.0;
         }
@@ -48,7 +48,7 @@ public class VectorLogic {
     public static double checkArithmeticalSum(double[] arr) {
         double sum = 0.0;
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return -1.0;
         }
@@ -62,7 +62,7 @@ public class VectorLogic {
     public static double checkGeometricalSum(double[] arr) {
         double result = 1.0;
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return -1.0;
         }
@@ -76,6 +76,10 @@ public class VectorLogic {
 
     public static boolean isIncreasing(double[] arr) {
         int length = arr.length;
+        if (arr == null || length == 0) {
+            LOGGER.error(ERR_MSG_ZERO);
+            return false;
+        }
         if (length < 2) {
             LOGGER.info("Array has not enough element to determine order.");
             return false;
@@ -92,6 +96,10 @@ public class VectorLogic {
 
     public static boolean isDecreasing(double[] arr) {
         int length = arr.length;
+        if (arr == null || length == 0) {
+            LOGGER.error(ERR_MSG_ZERO);
+            return false;
+        }
         if (length < 2) {
             LOGGER.info("Array has not enough element to determine order.");
             return false;
@@ -108,7 +116,7 @@ public class VectorLogic {
 
     public static int localMinIndexSearch(double[] arr) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return -1;
         }
@@ -123,7 +131,7 @@ public class VectorLogic {
 
     public static int localMaxIndexSearch(double[] arr) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return -1;
         }
@@ -138,7 +146,7 @@ public class VectorLogic {
 
     public static int linearSearch(double[] arr, double numberToFind) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return -1;
         }
@@ -153,7 +161,7 @@ public class VectorLogic {
 
     public static int binarySearch(double[] arr, double numberToFind, int lowIndex, int highIndex) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return -1;
         } else {
@@ -182,7 +190,7 @@ public class VectorLogic {
 
     public static void reverseArray(double[] arr) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return;
         }
@@ -202,7 +210,7 @@ public class VectorLogic {
 
     private static void bubbleSort(double[] arr, boolean direction) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return;
         }
@@ -231,11 +239,10 @@ public class VectorLogic {
 
     private static void insertionSort(double[] arr, boolean direction) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return;
         }
-
         for (int i = 1; i < length; i++) {
             double element = arr[i];
             int j = i;
@@ -257,11 +264,10 @@ public class VectorLogic {
 
     private static void selectionSort(double[] arr, boolean direction) {
         int length = arr.length;
-        if (length == 0) {
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return;
         }
-
         for (int i = 0; i < length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < length; j++) {
@@ -288,7 +294,8 @@ public class VectorLogic {
     }
 
     private static void merge(double[] arr, int indexFirst, int indexLast, boolean direction) {
-        if (arr.length == 0) {
+        int length = arr.length;
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return;
         }
@@ -362,7 +369,8 @@ public class VectorLogic {
     }
 
     private static void quick(double[] arr, int low, int high, boolean direction) {
-        if (arr == null || arr.length == 0) {
+        int length = arr.length;
+        if (arr == null || length == 0) {
             LOGGER.error(ERR_MSG_ZERO);
             return;
         }
