@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
  *
  * @author Yuri Lukashevich
  * @version 1.0
- * @createdate June 9, 2019
+ * @since June 9, 2019
  */
 
 public class VectorLogicTest {

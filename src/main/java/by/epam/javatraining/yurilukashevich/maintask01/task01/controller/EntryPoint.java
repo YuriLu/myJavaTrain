@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @author Yuri Lukashevich
  * @version 1.1
- * @createdate June 9, 2019
+ * @since June 9, 2019
  */
 
 public class EntryPoint {

@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
  *
  * @author Yuri Lukashevich
  * @version 1.1
- * @createdate June 10, 2019
+ * @since June 10, 2019
  */
 
 public class MatrixLogic {

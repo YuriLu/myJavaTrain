@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  *
  * @author Yuri Lukashevich
  * @version 1.0
- * @createdate June 10, 2019
+ * @since June 10, 2019
  */
 
 public class MatrixLogicTest {
