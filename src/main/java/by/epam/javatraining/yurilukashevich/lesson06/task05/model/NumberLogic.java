@@ -3,21 +3,20 @@ package by.epam.javatraining.yurilukashevich.lesson06.task05.model;
 public class NumberLogic {
 
     public static boolean checkIsPrime(int number) {
-        boolean result = false;
+        boolean result = true;
         number = number > 0 ? number : -number;
 
-        if (number > 1) {       // 0 and 1 are not prime numbers
-            if (number == 2) {  // 2 is prime
-                result = true;
-            }
-            for (int i = 2; i < number; i++) {      //check for prime number
-                if (number % i != 0) {
-                    result = true;
-                } else {
-                    break;
-                }
+        if (number < 2) {       // 0 and 1 are not prime numbers
+            return false;
+        }
+
+        int iteration = (int) Math.sqrt(number);
+        for (int i = 2; i <= iteration; i++) {      //check for prime number
+            if (number % i == 0) {
+                result = false;
+                break;
             }
         }
         return result;
-    }
+}
 }

@@ -2,6 +2,8 @@ package by.epam.javatraining.yurilukashevich.lesson06.addUnit.model;
 
 public class NumberLogic {
 
+    private static final int MAX_DIGIT_ONE_DIGIT_NUMBER = 9;
+
     public static int checkAmountOfEven(int number) {
         number = number > 0 ? number : -number;
         int count = 0;
@@ -118,9 +120,8 @@ public class NumberLogic {
     public static boolean isDigitsEqual(int number) {
         boolean result = false;
         number = number > 0 ? number : -number;
-        int maxOneDigitNumber = 9;
 
-        if (number > maxOneDigitNumber) {
+        if (number > MAX_DIGIT_ONE_DIGIT_NUMBER) {
             while (number / 10 != 0) {
                 int previousDigit = number % 10;
                 int currentDigit = (number /= 10) % 10;
@@ -155,15 +156,13 @@ public class NumberLogic {
     public static int checkMaxDigit(int number) {
         number = number > 0 ? number : -number;
         int max = number % 10;
-        int maxDigit = 9;
-
 
         while (number > 0) {
             int digit = number % 10;
             if (digit > max) {
                 max = digit;
             }
-            if (max == maxDigit) {
+            if (max == MAX_DIGIT_ONE_DIGIT_NUMBER) {
                 break;
             }
             number /= 10;
@@ -173,18 +172,17 @@ public class NumberLogic {
 
     public static boolean isPerfect(int number) {
         int sum = 0;
-        boolean result = false;
         number = number > 0 ? number : -number;
 
-        if (number > 1) {
-            for (int i = 1; i < number; i++) {
-                if (number % i == 0) {
-                    sum += i;
-                }
-            }
-            result = sum == number;
+        if (number <= 1) {
+            return false;
         }
-        return result;
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+        }
+        return sum == number;
     }
 }
 

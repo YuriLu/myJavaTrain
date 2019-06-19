@@ -7,17 +7,19 @@ public class NumberLogic {
         final int MAX_DIGIT_ONE_DIGIT_NUMBER = 9;
         number = number > 0 ? number : -number;
 
-        if (number > MAX_DIGIT_ONE_DIGIT_NUMBER) {
-            while (number / 10 != 0) {
-                int previousDigit = number % 10;
-                int currentDigit = (number /= 10) % 10;
-                if (checkEven(previousDigit, currentDigit)
-                        || checkOdd(previousDigit, currentDigit)) {
-                    result = true;
-                } else {
-                    result = false;
-                    break;
-                }
+        if (number <= MAX_DIGIT_ONE_DIGIT_NUMBER) {
+            return false;
+        }
+
+        while (number / 10 != 0) {
+            int previousDigit = number % 10;
+            int currentDigit = (number /= 10) % 10;
+            if (checkEven(previousDigit, currentDigit)
+                    || checkOdd(previousDigit, currentDigit)) {
+                result = true;
+            } else {
+                result = false;
+                break;
             }
         }
         return result;

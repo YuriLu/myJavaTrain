@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class HeadsAndTails {
 
-
     public static int countHeads(int iteration) {
         int count = 0;
         iteration = iteration > 0 ? iteration : -iteration;

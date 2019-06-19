@@ -13,6 +13,12 @@ public class NumberLogicTest {
     }
 
     @Test
+    public void testIsPrimeForOne() {
+        int number = 1;
+        assertFalse(NumberLogic.checkIsPrime(number));
+    }
+
+    @Test
     public void testIsPrime() {
         int number = 2;
         assertTrue(NumberLogic.checkIsPrime(number));

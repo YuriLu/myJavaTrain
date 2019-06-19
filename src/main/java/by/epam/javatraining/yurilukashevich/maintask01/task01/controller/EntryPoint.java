@@ -1,8 +1,13 @@
 package by.epam.javatraining.yurilukashevich.maintask01.task01.controller;
 
 
+import by.epam.javatraining.yurilukashevich.maintask01.task01.model.VectorArithmeticLogic;
 import by.epam.javatraining.yurilukashevich.maintask01.task01.model.VectorLogic;
+import by.epam.javatraining.yurilukashevich.maintask01.task01.model.VectorSearchLogic;
+import by.epam.javatraining.yurilukashevich.maintask01.task01.model.VectorSortLogic;
 import by.epam.javatraining.yurilukashevich.maintask01.task01.view.Printer;
+
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -18,79 +23,77 @@ public class EntryPoint {
     private static final double BOUND_FOR_ARRAY = 100.0; // array bound
     private static final String INITIAL_ARRAY = "\nInitial array:";
 
-
     public static void main(String[] args) {
 
         int arraySize = 6;
 
-        final double[] array = new double[arraySize];
+        final double[] arrayOne = new double[arraySize];
 
         for (int i = 0; i < arraySize; i++) {
-            array[i] = RANDOM.nextDouble() * BOUND_FOR_ARRAY + 1;   // creates array from 1 till 100
+            arrayOne[i] = RANDOM.nextDouble() * BOUND_FOR_ARRAY + 1;   // creates array from 1 till 100
         }
 
         Printer.print("\nCreate array of size = " + arraySize);
-        Printer.printArray(array);
+        Printer.print("\nArray = " + Arrays.toString(arrayOne) + "\n");
 
-        Printer.print("\nMin element = " + VectorLogic.searchMin(array));
-        Printer.print("\nMax element = " + VectorLogic.searchMax(array));
+        Printer.print("\nMin element = " + VectorSearchLogic.searchMin(arrayOne));
+        Printer.print("\nMax element = " + VectorSearchLogic.searchMax(arrayOne));
 
-        Printer.print("\nArithmetical middle = " + VectorLogic.checkArithmeticalSum(array));
-        Printer.print("\nGeometrical middle = " + VectorLogic.checkGeometricalSum(array));
+        Printer.print("\nArithmetical middle = " + VectorArithmeticLogic.checkArithmeticalSum(arrayOne));
+        Printer.print("\nGeometrical middle = " + VectorArithmeticLogic.checkGeometricalSum(arrayOne));
 
-        Printer.print("\nIs increasing elements array? --> " + VectorLogic.isIncreasing(array));
-        Printer.print("\nIs decreasing elements array? --> " + VectorLogic.isDecreasing(array));
+        Printer.print("\nIs increasing elements array? --> " + VectorLogic.isIncreasing(arrayOne));
+        Printer.print("\nIs decreasing elements array? --> " + VectorLogic.isDecreasing(arrayOne));
 
-        Printer.print("\nFirst local min index is --> " + VectorLogic.localMinIndexSearch(array));
-        Printer.print("\nFirst local max index is --> " + VectorLogic.localMaxIndexSearch(array));
+        Printer.print("\nFirst local min index is --> " + VectorSearchLogic.localMinIndexSearch(arrayOne));
+        Printer.print("\nFirst local max index is --> " + VectorSearchLogic.localMaxIndexSearch(arrayOne));
 
-        double[] arr = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
+        double[] array = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
         double numberToFind = 15.3;
         int low = 0;
         int high = 4;
 
         Printer.print(INITIAL_ARRAY);
-        Printer.printArray(array);
-        Printer.print("\nLinear search for key = " + numberToFind + " Index is = " + VectorLogic.linearSearch(arr, numberToFind));
-        Printer.print("\nBinary search for key = " + numberToFind + " Index is = " + VectorLogic.binarySearch(arr, numberToFind, low, high));
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
+        Printer.print("\nLinear search for key = " + numberToFind + " Index is = " + VectorSearchLogic.linearSearch(array, numberToFind));
+        Printer.print("\nBinary search for key = " + numberToFind + " Index is = " + VectorSearchLogic.binarySearch(array, numberToFind, low, high));
 
         Printer.print(INITIAL_ARRAY);
-        Printer.printArray(array);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
         Printer.print("\nReversed array:");
-        VectorLogic.reverseArray(array);
-        Printer.printArray(array);
+        VectorArithmeticLogic.reverseArray(array);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
 
-        arr = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
+        array = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
         Printer.print("\nInsertion sort");
         Printer.print(INITIAL_ARRAY);
-        Printer.printArray(arr);
-        VectorLogic.insertionSort(arr);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
+        VectorSortLogic.insertionSort(array);
         Printer.print("\nSorted by insertion array:");
-        Printer.printArray(arr);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
 
-
-        arr = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
+        array = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
         Printer.print("\nSelection sort");
         Printer.print(INITIAL_ARRAY);
-        Printer.printArray(arr);
-        VectorLogic.selectionSort(arr);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
+        VectorSortLogic.selectionSort(array);
         Printer.print("\nSorted by selection array:");
-        Printer.printArray(arr);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
 
-        arr = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
+        array = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
         Printer.print("\nMerge sort");
         Printer.print(INITIAL_ARRAY);
-        Printer.printArray(arr);
-        VectorLogic.mergeSort(arr);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
+        VectorSortLogic.mergeSort(array);
         Printer.print("\nSorted by merge array:");
-        Printer.printArray(arr);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
 
-        arr = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
+        array = new double[]{15.9, 19.7, 15.3, 14.25, 4.5};
         Printer.print("\nQuick sort");
         Printer.print(INITIAL_ARRAY);
-        Printer.printArray(arr);
-        VectorLogic.quickSort(arr);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
+        VectorSortLogic.quickSort(array);
         Printer.print("\nSorted by quick array:");
-        Printer.printArray(arr);
+        Printer.print("\nArray = " + Arrays.toString(array) + "\n");
     }
 }

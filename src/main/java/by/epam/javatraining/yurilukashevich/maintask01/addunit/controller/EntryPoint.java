@@ -2,9 +2,12 @@ package by.epam.javatraining.yurilukashevich.maintask01.addunit.controller;
 
 
 import by.epam.javatraining.yurilukashevich.maintask01.addunit.model.MatrixLogic;
+import by.epam.javatraining.yurilukashevich.maintask01.addunit.model.MatrixSearchLogic;
+import by.epam.javatraining.yurilukashevich.maintask01.addunit.model.MatrixTransformLogic;
 import by.epam.javatraining.yurilukashevich.maintask01.addunit.view.Printer;
 import org.apache.log4j.Logger;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -16,7 +19,6 @@ import java.util.Random;
  */
 
 public class EntryPoint {
-    private static final Logger LOGGER = Logger.getLogger(EntryPoint.class);
     private static final Random RANDOM = new Random();
     private static final int BOUND_FOR_ARRAY = 50; // array bound
 
@@ -34,22 +36,22 @@ public class EntryPoint {
         }
 
         Printer.print("\nCreate matrix of size = [" + arraySizeN + "," + arraySizeM + "]");
-        Printer.printArray(array);
+        Printer.print("\nArray = " + Arrays.deepToString(array) + "\n");
 
-        Printer.print("\nMin element = " + MatrixLogic.searchMin(array));
-        Printer.print("\nMax element = " + MatrixLogic.searchMax(array));
+        Printer.print("\nMin element = " + MatrixSearchLogic.searchMin(array));
+        Printer.print("\nMax element = " + MatrixSearchLogic.searchMax(array));
         Printer.print("\nIs symmetric(square)? --> " + MatrixLogic.isSymmetric(array));
         Printer.print("\nIs symmetric by diagonal? --> " + MatrixLogic.isSymmetricByDiagonal(array) + "\n");
 
         array = new int[][]{{2, 34, 42}, {17, 9, 28}, {35, 37, 3}};
-        Printer.printArray(array);
+        Printer.print("\nArray = " + Arrays.deepToString(array) + "\n");
 
-        Printer.print("\nFirst local Min is " + MatrixLogic.localMinSearch(array) + "\n");
-        Printer.print("\nFirst local Max is " + MatrixLogic.localMaxSearch(array) + "\n");
+        Printer.print("\nFirst local Min is " + MatrixSearchLogic.localMinSearch(array) + "\n");
+        Printer.print("\nFirst local Max is " + MatrixSearchLogic.localMaxSearch(array) + "\n");
 
         Printer.print("\nTranspose matrix:");
-        MatrixLogic.transpose(array);
-        Printer.printArray(array);
+        MatrixTransformLogic.transpose(array);
+        Printer.print("\nArray = " + Arrays.deepToString(array) + "\n");
 
     }
 }
