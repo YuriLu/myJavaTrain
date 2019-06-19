@@ -9,3 +9,10 @@ public class PlaneSortBySpeed implements Comparator<Plane>{
         return o1.getMaxSpeed() - o2.getMaxSpeed();
     }
 }
+
+/*Arrays.sort(aSoftware, new Comparator<Software>() {
+    public int compare(Software s1, Software s2) {
+        return s1.getSoftwareTitle().compareTo(s2.getSoftwareTitle());
+    }
+});
+*/
